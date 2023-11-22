@@ -1,5 +1,7 @@
 # Libraries
 from haversine import haversine
+from datetime import datetime
+
 import plotly.express as px
 import plotly.graph_objects as go
 
@@ -43,9 +45,9 @@ st.sidebar.markdown('## Selecione uma data limite')
 
 data_slider = st.sidebar.slider(
     'Até qual valor?',
-    value=pd.datetime(2022, 4, 13),
-    min_value=pd.datetime(2022, 2, 11),
-    max_value=pd.datetime(2022, 6, 4),
+    value=datetime(2022, 4, 13),
+    min_value=datetime(2022, 2, 11),
+    max_value=datetime(2022, 6, 4),
     format='DD-MM-YYYY'
 )
 
@@ -86,7 +88,7 @@ st.header('Marketplace - Visão Cliente')
 st.dataframe(df1.head())
 
 
-st.header(data_slider)
+# st.header(data_slider)
 
 
 tab1, tab2, tab3 = st.tabs(['Visão Gerencial', 'Visão Tática', 'Visão Geográfica'])
