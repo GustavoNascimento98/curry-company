@@ -120,7 +120,11 @@ Cada visão é representada pelo seguinte conjunto de métricas.
 
 Painel online, hospedado em uma Cloud e disponível para acesso em qualquer dispositivo conectado à Internet.
 
-O painel pode ser acessado através desse link: [dashboard](https://gustavo-curry-company.streamlit.app/)
+O painel pode ser acessado através desse link: [dashboard](https://curry-company-cds.streamlit.app/)
+
+
+
+https://github.com/GustavoNascimento98/curry-company/assets/113242581/7dcd1c9c-d2ac-435b-a737-2967702fed39
 
 
 
