@@ -1,13 +1,26 @@
+# Curry Company Serviço de Delivery
 [![pt-br](https://img.shields.io/badge/language-pt--br-green.svg)](https://github.com/GustavoNascimento98/curry-company/blob/main/README.md)
 [![en](https://img.shields.io/badge/language-en-red.svg)](https://github.com/GustavoNascimento98/curry-company/blob/main/README-en.md)
 
 ![](img/food_delivery.jpg)
 
+</br>
+
+**Tabela de Conteúdos**
+
+- [1. Problema de negócio](#1-problema-de-negócio)
+- [2. Premissas assumida para a análise](#2-premissas-assumida-para-a-análise)
+- [3. Estratégia da solução.](#3-estratégia-da-solução)
+- [4. Top 3 Insights de dados](#4-top-3-insights-de-dados)
+- [5. Produto final do projeto](#5-produto-final-do-projeto)
+- [6. Conclusão](#6-conclusão)
+- [7. Próximos passos](#7-próximos-passos)
+
+</br>
+
 # 1. Problema de negócio
     
-A Curry Company é uma empresa de tecnologia que criou um aplicativo que conecta restaurantes, entregadores e pessoas.
-    
-Através desse aplicativo, é possível realizar o pedido de uma refeição em qualquer restaurante cadastrado, e recebê-lo no conforto da sua casa por um entregador também cadastrado no aplicativo da Curry Company.
+A Curry Company é uma empresa de tecnologia que criou um aplicativo que conecta restaurantes, entregadores e pessoas. Através desse aplicativo, é possível realizar o pedido de uma refeição em qualquer restaurante cadastrado, e recebê-lo no conforto da sua casa por um entregador também cadastrado no aplicativo da Curry Company.
     
 A empresa realiza negócios entre restaurantes, entregadores e pessoas, e gera muitos dados sobre entregas, tipos de pedidos, condições climáticas, avaliação dos entregadores e etc. Apesar da empresa estar crescendo, em termos de entregas, o CEO não tem visibilidade completa dos KPI’s de crescimento da empresa.
     
@@ -22,6 +35,8 @@ Você foi contratado com um Cientista de Dados para criar soluções de dados pa
 5. A quantidade de pedidos por entregador por semana.
 6. A localização central de cada cidade por tipo de tráfego.
 
+</br>
+
 ********************************************Do lado do entregador:********************************************
 
 1. A menor e a maior idade dos entregadores.
@@ -31,6 +46,8 @@ Você foi contratado com um Cientista de Dados para criar soluções de dados pa
 5. A avaliação média e o desvio padrão por condições climáticas.
 6. Os 10 entregadores mais rápidos por cidade.
 7. Os 10 entregadores mais lentos por cidade.
+
+</br>
 
 **************************************************Do lado dos restaurantes:**************************************************
 
@@ -43,7 +60,7 @@ Você foi contratado com um Cientista de Dados para criar soluções de dados pa
 
 O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
     
-
+</br>
 
 # 2. Premissas assumida para a análise
 
@@ -55,7 +72,7 @@ O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exib
     2. Visão restaurantes
     3. Visão entregadores
     
-    
+</br>
     
 # 3. Estratégia da solução.
 
@@ -93,7 +110,7 @@ Cada visão é representada pelo seguinte conjunto de métricas.
     6. Tempo médio do entregador mais rápido.
     7. Tempo médio do entregador mais rápido por cidade.
     
-
+</br>
 
 # 4. Top 3 Insights de dados
     
@@ -101,7 +118,7 @@ Cada visão é representada pelo seguinte conjunto de métricas.
 2. As cidades do tipo Semi-Urban não possuem condições baixas de trânsito.
 3. As maiores variações no tempo de entrega, acontecem durante o clima ensolarado.
 
-
+</br>
 
 # 5. Produto final do projeto
 
@@ -109,7 +126,7 @@ Painel online, hospedado em uma Cloud e disponível para acesso em qualquer disp
 
 O painel pode ser acessado através desse link: [dashboard](https://gustavo-curry-company.streamlit.app/)
 
-
+</br>
 
 # 6. Conclusão
 
@@ -117,7 +134,7 @@ O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exib
 
 Da visão da empresa, podemos concluir que o número de pedidos cresceu entre a semana 06 e a semana 13 do ano de 2022.
 
-
+</br>
 
 # 7. Próximos passos
 

@@ -18,7 +18,7 @@ import pages.modulos.utils as utils
 #import modulos.utils as utils
 
 # Importa o dataset
-df = pd.read_csv('dataset/train.csv')
+df = pd.read_csv('dataset/food-delivery-dataset.csv')
 
 
 
