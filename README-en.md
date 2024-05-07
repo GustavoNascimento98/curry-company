@@ -129,7 +129,9 @@ Each of the three business views composing the dashboard were developed having t
 
 The final product is an online dashboard, hosted on a Cloud and available for access on any internet-connected device.
 
-The dashboard can be accessed through this link: [dashboard](https://gustavo-curry-company.streamlit.app/)
+The dashboard can be accessed through this link: [dashboard](https://curry-company-cds.streamlit.app/)
+
+https://github.com/GustavoNascimento98/curry-company/assets/113242581/7dcd1c9c-d2ac-435b-a737-2967702fed39
 
 </br>
 
