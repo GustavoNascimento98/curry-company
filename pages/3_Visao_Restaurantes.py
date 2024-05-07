@@ -1,17 +1,9 @@
 # Libraries
-from haversine import haversine
 from datetime import datetime
 
-import plotly.express as px
-import plotly.graph_objects as go
-
 import pandas as pd
-import numpy as np
 import streamlit as st
 from PIL import Image
-
-import folium
-from streamlit_folium import folium_static
 
 import pages.modulos.utils as utils
 
@@ -96,14 +88,17 @@ with tab1:
         
         with col1:
             delivery_unique = df1['Delivery_person_ID'].nunique()
-            col1.metric('entregadores', delivery_unique)
+            col1.metric('Entregadores', delivery_unique)
             
         with col2:
             avg_distance = round(df1['Distance'].mean(), 2)
-            col2.metric('distância média (km)', avg_distance)
+            col2.metric('Distância média (km)', avg_distance)
             
         with col3:
-            df_aux = df1[['Festival', 'Time_taken(min)']].groupby('Festival').agg({'Time_taken(min)': ['mean', 'std']})
+            df_aux = ( df1[['Festival', 'Time_taken(min)']]
+                      .groupby('Festival')
+                      .agg({'Time_taken(min)': ['mean', 'std']})
+                )
             df_aux.columns = ['mean_time', 'std_time']
             
             avg_time_festival = round(df_aux.loc['Yes', 'mean_time'], 2)
@@ -112,24 +107,24 @@ with tab1:
             avg_time_NO_festival = round(df_aux.loc['No', 'mean_time'], 2)
             std_time_NO_festival = round(df_aux.loc['No', 'std_time'], 2)
             
-            col3.metric('Tempo médio de entrega c/ festival', avg_time_festival)
+            col3.metric('Tempo médio c/ festival', avg_time_festival)
             
             
         with col4:
-            col4.metric('Desvio padrão de entrega c/ festival', std_time_festival)
+            col4.metric('Desvio padrão c/ festival', std_time_festival)
             
         with col5:
-            col5.metric('Tempo médio de entrega s/ festival', avg_time_NO_festival)
+            col5.metric('Tempo médio s/ festival', avg_time_NO_festival)
             
         with col6:
-            col6.metric('Desvio padrão de entrega c/ festival', std_time_NO_festival)
+            col6.metric('Desvio padrão c/ festival', std_time_NO_festival)
             
             
         
     with st.container():
         st.markdown('''---''')
         
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns(2, gap='large')
     
         with col1:
             st.title('Tempo médio de entrega por cidade')
@@ -142,12 +137,15 @@ with tab1:
         with col2:
             st.title('Distribuição da distância')
             
-            df_aux = ( df1[['Time_taken(min)', 'City', 'Type_of_order']].groupby(['City', 'Type_of_order'])
-                                  .agg({'Time_taken(min)': ['mean', 'std']}).reset_index() )
+            df_aux = ( df1[['Time_taken(min)', 'City', 'Type_of_order']]
+                      .groupby(['City', 'Type_of_order'])
+                      .agg({'Time_taken(min)': ['mean', 'std']})
+                      .reset_index()
+                )
 
             df_aux.columns = ['City', 'Type', 'mean_time', 'std_time']
 
-            st.dataframe(df_aux)
+            st.dataframe(df_aux, use_container_width=True)
 
 
         

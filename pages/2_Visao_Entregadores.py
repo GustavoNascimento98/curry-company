@@ -1,17 +1,10 @@
 # Libraries
-from haversine import haversine
 from datetime import datetime
-
-import plotly.express as px
-import plotly.graph_objects as go
 
 import pandas as pd
 import numpy as np
 import streamlit as st
 from PIL import Image
-
-import folium
-from streamlit_folium import folium_static
 
 import pages.modulos.utils as utils
 
@@ -123,33 +116,46 @@ with tab1:
         st.markdown('''---''')
         st.title('Avaliações')
         
-        col1, col2 = st.columns(2)
+        col1, col2 = st.columns(2, gap='large')
         
         with col1:
             st.markdown('##### Avaliações média por entregador')
             
-            df_ratings = df1[['Delivery_person_Ratings', 'Delivery_person_ID']].groupby('Delivery_person_ID').mean().reset_index()
-            st.dataframe(df_ratings)
+            df_ratings = ( df1[['Delivery_person_Ratings', 'Delivery_person_ID']]
+                          .groupby('Delivery_person_ID')
+                          .mean()
+                          .reset_index()
+                )
+            
+            st.dataframe(df_ratings, use_container_width=True)
             
             
         with col2:
             
             st.markdown('##### Avaliação média por trânsito')
             
-            df_traffic_stats = ( df1[['Delivery_person_Ratings', 'Road_traffic_density']].groupby('Road_traffic_density')
-                                                .agg([np.mean, np.std]).reset_index() )
+            df_traffic_stats = ( df1[['Delivery_person_Ratings', 'Road_traffic_density']]
+                                .groupby('Road_traffic_density')
+                                .agg([np.mean, np.std])
+                                .reset_index() 
+                            )
             
             df_traffic_stats.columns = ['Road_traffic_density', 'Ratings_mean', 'Ratings_std']
+
             st.dataframe(df_traffic_stats)
 
             
             
             st.markdown('##### Avaliação média por clima')
             
-            df_weather_stats = ( df1[['Delivery_person_Ratings', 'Weatherconditions']].groupby('Weatherconditions')
-                                                .agg({'Delivery_person_Ratings': ['mean', 'std']}).reset_index() )
+            df_weather_stats = ( df1[['Delivery_person_Ratings', 'Weatherconditions']]
+                                .groupby('Weatherconditions')
+                                .agg({'Delivery_person_Ratings': ['mean', 'std']})
+                                .reset_index()
+                        )
 
             df_weather_stats.columns = ['Weatherconditions', 'Ratings_mean', 'Ratings_std']
+
             st.dataframe(df_weather_stats)
             
             
@@ -170,8 +176,11 @@ with tab1:
         with col1:
             st.markdown('##### Top entregadores mais rápidos')
             
-            df_fast_delivery = ( df1[['Time_taken(min)', 'Delivery_person_ID', 'City']].groupby(['City', 'Delivery_person_ID'])
-                                        .mean().sort_values(['City', 'Time_taken(min)']) )
+            df_fast_delivery = ( df1[['Time_taken(min)', 'Delivery_person_ID', 'City']]
+                                .groupby(['City', 'Delivery_person_ID'])
+                                .mean()
+                                .sort_values(['City', 'Time_taken(min)'])
+                            )
             
             st.dataframe(df_fast_delivery.loc[city].reset_index().head(10))
 
@@ -179,8 +188,11 @@ with tab1:
         with col2:
             st.markdown('##### Top entregadores mais lentos')
             
-            df_slow_delivery = ( df1[[ 'Time_taken(min)', 'Delivery_person_ID', 'City']].groupby(['City', 'Delivery_person_ID'])
-                                        .mean().sort_values(['City', 'Time_taken(min)'], ascending=False) )
+            df_slow_delivery = ( df1[[ 'Time_taken(min)', 'Delivery_person_ID', 'City']]
+                                .groupby(['City', 'Delivery_person_ID'])
+                                .mean()
+                                .sort_values(['City', 'Time_taken(min)'], ascending=False)
+                            )
             
             st.dataframe(df_slow_delivery.loc[city].reset_index().head(10))
             

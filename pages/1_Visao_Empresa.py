@@ -1,34 +1,23 @@
 # Libraries
-from haversine import haversine
-from datetime import datetime
-
-import plotly.express as px
-import plotly.graph_objects as go
-
 import pandas as pd
 import streamlit as st
 from PIL import Image
 
-import folium
+from datetime import datetime
 from streamlit_folium import folium_static
-
 
 import pages.modulos.utils as utils
 
-#import modulos.utils as utils
+st.set_page_config(page_title='Visão Empresa', page_icon='📊', layout='wide')
+
 
 # Importa o dataset
 df = pd.read_csv('dataset/food-delivery-dataset.csv')
-
-
 
 # Limpeza dos dados
 df1 = df.copy()
 
 df1 = utils.clean_dataset(df1)
-
-
-st.set_page_config(page_title='Visão Empresa', page_icon='📈', layout='wide')
 
 # =====================================================================================
 # Sidebar (Barra Lateral)

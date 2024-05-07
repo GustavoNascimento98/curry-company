@@ -16,7 +16,6 @@
 - [6. Conclusão](#6-conclusão)
 - [7. Próximos passos](#7-próximos-passos)
 
-</br>
 
 # 1. Problema de negócio
     
@@ -60,7 +59,6 @@ Você foi contratado com um Cientista de Dados para criar soluções de dados pa
 
 O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exibam essas métricas da melhor forma possível para o CEO.
     
-</br>
 
 # 2. Premissas assumida para a análise
 
@@ -72,7 +70,6 @@ O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exib
     2. Visão restaurantes
     3. Visão entregadores
     
-</br>
     
 # 3. Estratégia da solução.
 
@@ -84,7 +81,7 @@ O painel estratégico utilizando as métricas que refletem as 3 principais visõ
 
 Cada visão é representada pelo seguinte conjunto de métricas.
 
-1. Visão dos crescimento da empresa.
+**1. Visão dos crescimento da empresa**
     1. Pedidos por dia.
     2. Porcentagem de pedidos por condições de trânsito.
     3. Quantidade de pedidos por tipo e por cidade.
@@ -92,7 +89,7 @@ Cada visão é representada pelo seguinte conjunto de métricas.
     5. Quantidade de pedidos por tipo de entrega.
     6. Quantidade de pedidos por condições de trânsito e tipo de cidade.
     
-2. Visão do crescimento dos restaurantes.
+**2. Visão do crescimento dos restaurantes**
     1. Quantidade de pedidos únicos.
     2. Distância média percorrida.
     3. Tempo médio de entrega durante o festival e dias normais.
@@ -101,7 +98,7 @@ Cada visão é representada pelo seguinte conjunto de métricas.
     6. Distribuição do tempo médio de entrega por cidade.
     7. Tempo médio de entrega por tipo de pedido.
     
-3. Visão do crescimento dos entregadores
+**3. Visão do crescimento dos entregadores**
     1. Idade do entregador mais velho e do mais novo.
     2. Avaliação do melhor e do pior veículo.
     3. Avaliação média por entregador.
@@ -110,7 +107,6 @@ Cada visão é representada pelo seguinte conjunto de métricas.
     6. Tempo médio do entregador mais rápido.
     7. Tempo médio do entregador mais rápido por cidade.
     
-</br>
 
 # 4. Top 3 Insights de dados
     
@@ -118,7 +114,7 @@ Cada visão é representada pelo seguinte conjunto de métricas.
 2. As cidades do tipo Semi-Urban não possuem condições baixas de trânsito.
 3. As maiores variações no tempo de entrega, acontecem durante o clima ensolarado.
 
-</br>
+
 
 # 5. Produto final do projeto
 
@@ -126,7 +122,7 @@ Painel online, hospedado em uma Cloud e disponível para acesso em qualquer disp
 
 O painel pode ser acessado através desse link: [dashboard](https://gustavo-curry-company.streamlit.app/)
 
-</br>
+
 
 # 6. Conclusão
 
@@ -134,7 +130,7 @@ O objetivo desse projeto é criar um conjunto de gráficos e/ou tabelas que exib
 
 Da visão da empresa, podemos concluir que o número de pedidos cresceu entre a semana 06 e a semana 13 do ano de 2022.
 
-</br>
+
 
 # 7. Próximos passos
 

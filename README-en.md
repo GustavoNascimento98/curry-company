@@ -8,7 +8,7 @@
 
 </br>
 
-**Tabela de Conteúdos**
+**Table of contents**
 
 - [1. Business Problem](#1-business-problem)
 - [2. Assumptions made for the analysis](#2-assumptions-made-for-the-analysis)
@@ -83,7 +83,7 @@ The goal of this project is to create a set of charts and/or tables that display
     
 # 3. Planning the solution.
 
-The strategic dashboard utilizing metrics reflecting the 3 main views of the company's business model:
+Each of the three business views composing the dashboard were developed having the following business metrics:
 
 1. **Company growth view**:
     - Orders per day.
