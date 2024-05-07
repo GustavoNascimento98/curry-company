@@ -33,7 +33,7 @@ st.set_page_config(page_title='Visão Empresa', page_icon='📈', layout='wide')
 # =====================================================================================
 # Sidebar (Barra Lateral)
 # =====================================================================================
-image_path = 'logo.png'
+image_path = 'img/logo.png'
 image = Image.open(image_path)
 st.sidebar.image(image, width=120)
 
